@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/blue_grey"
+    android:id="@+id/toolbar"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        style="bold"
+        android:src="@drawable/ic_burger_menu"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"/>
+    <ImageView
+        android:src="@drawable/ic_spa"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="30dp"
+        android:layout_height="40dp"/>
+    <ImageView
+        style="bold"
+        android:layout_width="30dp"
+        android:src="@drawable/ic_search"
+        android:layout_alignParentEnd="true"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>
+
+    </RelativeLayout>
