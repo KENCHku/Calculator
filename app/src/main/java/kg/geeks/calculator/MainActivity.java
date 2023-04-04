@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textView = findViewById(R.id.text_view);
         tv_intent = findViewById(R.id.tv_intenttt);
+
+
     }
 
     private void setNumber(String number) {//метод который проверяет нажатие кнопок цифр,точки и очистить
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         isOperationClick = false;//проверка на нажатие кнопок операции
+        tv_intent.setAlpha(0);
     }
 
     @SuppressLint("ResourceAsColor")
@@ -124,16 +127,8 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (operation) {//проверка нажал ты на операцию или нет
                     case "+":
-                        tv_intent.setAlpha(1);
-                        tv_intent.setTextColor(R.color.white);
-                        tv_intent.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                Intent intent = new Intent(); // For Testing
-                                intent.setClass(MainActivity.this,SecondActivity.class);
-                                startActivity(intent);
-                            }
-                        });
+
+                        onIntentVisible();
                         sum = first + second;//простая арифметика
                         break;
                     case "-":
@@ -154,5 +149,21 @@ public class MainActivity extends AppCompatActivity {
                 isOperationClick = true;
                 break;
         }
+    }
+
+    public void onIntentVisible(){
+        tv_intent.setAlpha(1);
+       tv_intent.setBackgroundColor(R.color.white);
+        // tv_intent.setTextColor(R.color.white);
+        tv_intent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(); // For Testing
+                intent.setClass(MainActivity.this,SecondActivity.class);
+                startActivity(intent);
+                finish();
+
+            }
+        });
     }
 }

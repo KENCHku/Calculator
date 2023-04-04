@@ -73,6 +73,7 @@
 
 
         <com.google.android.material.button.MaterialButton
+            android:onClick="onRedClick"
             android:layout_gravity="center"
             app:backgroundTint="@color/pink"
             app:cornerRadius="16dp"
