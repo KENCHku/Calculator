@@ -160,6 +160,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(); // For Testing
                 intent.setClass(MainActivity.this,SecondActivity.class);
+                String result = textView.getText().toString();
+                intent.putExtra("key20", result);
                 startActivity(intent);
                 finish();
 
